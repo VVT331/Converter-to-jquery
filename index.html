@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+    <meta name="title" content="USD Currency Converter - Convert US Dollar to Any Currency | Real-Time Rates">
+    <meta name="description"
+        content="Free online USD currency converter. Convert US Dollar to EUR, GBP, JPY, and 150+ currencies with live exchange rates. Fast, accurate, and easy to use.">
+    <meta name="keywords"
+        content="USD converter, currency converter, dollar converter, USD to EUR, USD to GBP, exchange rate, currency exchange, US Dollar conversion">
+    <meta name="language" content="English">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+
+<body>
+
+    <main class="converter">
+        <div class="container">
+            <h1 class="converter-title">Currency Converter</h1>
+            <p class="converter-txt">Convert USD to your preferred currency instantly</p>
+
+            <div class="converter__wrapper">
+                <form action="" class="converter__form">
+                    <fieldset>
+                        <div class="converter__form-wrapper">
+                            <label for="input-receiving" class="converter__label">Amount in USD</label>
+                            <input type="number" name="receiving" required placeholder="Input" class="converter__input"
+                                id="input-receiving">
+                        </div>
+                        <div class="converter__form-wrapper">
+                            <label for="input-extradition" class="converter__label">Converted Amount</label>
+                            <input type="number" name="extradition" required placeholder="Output"
+                                class="converter__input" id="input-extradition">
+                        </div>
+                    </fieldset>
+                </form>
+                <div class="converter__currency">
+                    <label class="converter__currency-label" for="search-currency">Select Currency</label>
+                    <button type="button" class="converter__currency-trigger">
+                        <span class="converter__currency-code">EUR</span>
+                        <p class="converter__currency-rate">rate = </p>
+                        <span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 10l5-8 5 8" stroke="#7c3aed" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M7 14l5 8 5-8" stroke="#7c3aed" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+
+                <div class="converter__choice">
+                    <div class="converter__search">
+                        <span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="10" cy="10" r="7" stroke="#475569" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M15 15l5 5" stroke="#475569" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <input id="search-currency" type="text" class="converter__search-input"
+                            placeholder="Search currency…">
+                    </div>
+                    <div class="converter__list">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="/src/js/script.js"></script>
+</body>
+
+</html>
