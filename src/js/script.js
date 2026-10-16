@@ -9,7 +9,8 @@ $(document).ready(() => {
         extradition = $('#input-extradition'),
         listValues = $('.converter__list'),
         menuValues = $('.converter__choice'),
-        btnOpenMenu = $('.converter__currency-trigger');
+        btnOpenMenu = $('.converter__currency-trigger'),
+        search = $('#search-currency');
 
 
     let btnArr = [],
@@ -20,7 +21,20 @@ $(document).ready(() => {
         menuValues.toggleClass('converter__choice_active');
     });
 
+    search.on('input', function () {
+        const text = $(this).val().trim().toUpperCase();
 
+        $(btnArr).each((index, btn) => {
+
+            const btnCode = btn.attr('data-code').toUpperCase();
+
+            if (btnCode.startsWith(text)) {
+                btn.show();
+            } else {
+                btn.hide();
+            }
+        });
+    });
 
     const getDataCurr = function (url) {
         return $.ajax({
